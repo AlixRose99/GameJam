@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class timer : MonoBehaviour {
 
     float time_secs = 300;
-    public string timerText;
+    public Text timerText;
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
+
+
         StartCountdownTimer();
-        print(timerText);
 
     }
 
@@ -18,7 +21,7 @@ public class timer : MonoBehaviour {
     {
         if (timerText != null)
         {
-            timerText = "";
+            timerText.text = "5:00:000";
             InvokeRepeating("UpdateTimer", 0.0f, 0.01667f);
         }
     }
@@ -31,7 +34,7 @@ public class timer : MonoBehaviour {
             string secs = (time_secs % 60).ToString("00");
             string frac = ((time_secs * 100) %100).ToString("000");
 
-            timerText = "Time Left: " + mins + ":" + secs + ":" + frac;
+            timerText.text = "Time Left: " + mins + ":" + secs + ":" + frac;
         }
     }
 }
