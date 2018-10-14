@@ -1,14 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class RayCast : MonoBehaviour
 {
     Camera cam;
+    GameObject[] buttons;
+    GameObject CurrentButton;
+    int index;
 
     void Start()
     {
         cam = GetComponent<Camera>();
+
+        buttons = GameObject.FindGameObjectsWithTag("BUTTON");
+        index = Random.Range(0, buttons.Length);
+        CurrentButton = buttons[index];
+        print(CurrentButton.name);
+
     }
 
     void Update()

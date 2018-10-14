@@ -11,7 +11,7 @@ public class RandomGenerator : MonoBehaviour
 
 	public void Start()
 	{
-		buttons = GameObject.FindGameObjectsWithTag("Button");
+		buttons = GameObject.FindGameObjectsWithTag("BUTTON");
 		index = Random.Range(0, buttons.Length);
 		CurrentButton = buttons[index];
 		print (CurrentButton.name);
