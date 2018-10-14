@@ -4,26 +4,7 @@ using System.Collections.Generic;
 
 public class RayCast : MonoBehaviour
 {
-<<<<<<< HEAD
-	public Camera camera;
-	RaycastHit hit;
-
-	void Update()
-	{
-
-		Ray ray = camera.ScreenPointToRay(Input.mousePosition);
-
-		if (Physics.Raycast(ray, out hit))
-		{
-			Transform objectHit = hit.transform;
-
-			print(objectHit.tag);
-		}
-	}
-}
-
-=======
-    Camera cam;
+ Camera cam;
 
     void Start()
     {
@@ -40,4 +21,3 @@ public class RayCast : MonoBehaviour
             print("I'm looking at nothing!");
     }
 }
->>>>>>> tish
