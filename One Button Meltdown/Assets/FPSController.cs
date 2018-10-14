@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class FPSController : MonoBehaviour {
 
-    public float minX = -60f;
-    public float maxX = 60f;
-    public float minY = -20f;
-    public float maxY = 40f;
+    public float minX = -54f;
+    public float maxX = 54f;
+    public float minY = -130f;
+    public float maxY = 130f;
 
 
-    public float sensX = 15f;
-    public float sensY = 15f;
+    public float sensX = 5f;
+    public float sensY = 5f;
 
     public Camera PlayerCam;
 
