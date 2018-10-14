@@ -4,18 +4,20 @@ using System.Collections.Generic;
 
 public class RayCast : MonoBehaviour
 {
-    public Camera camera;
-    RaycastHit hit;
+    Camera cam;
 
-    void Update() {
+    void Start()
+    {
+        cam = GetComponent<Camera>();
+    }
 
-        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
-
+    void Update()
+    {
+        Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+        RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
-        {
-            Transform objectHit = hit.transform;
-
-            print(objectHit.tag);
-        }
+            print("I'm looking at " + hit.transform.name);
+        else
+            print("I'm looking at nothing!");
     }
 }
