@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -89,7 +89,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: 1e99faeb1f4463749880347843f79485,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -852,6 +853,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 660779303}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &667835988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 667835989}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &667835989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667835988}
+  m_LocalRotation: {x: -0.3121742, y: -0, z: -0, w: 0.9500249}
+  m_LocalPosition: {x: 0, y: 2.9791, z: 3.954}
+  m_LocalScale: {x: 0.5, y: 0.049999997, z: 0.5}
+  m_Children:
+  - {fileID: 758334852}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &724838859
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,7 +1012,7 @@ GameObject:
   - component: {fileID: 758334850}
   - component: {fileID: 758334849}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Button
   m_TagString: BUTTON
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1049,13 +1079,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 758334848}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.42, y: 2.9791, z: 3.954}
-  m_LocalScale: {x: 0.5, y: 0.05, z: 0.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 667835989}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -36.381, y: 0, z: 0}
 --- !u!1 &784060613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,6 +1356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432970523d9a64543ac44ad9eaf640b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time_secs: 10
   timerText: {fileID: 1304868679}
 --- !u!114 &1304868679
 MonoBehaviour:
@@ -1473,7 +1504,7 @@ GameObject:
   - component: {fileID: 1469104756}
   - component: {fileID: 1469104755}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: TimerScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
