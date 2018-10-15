@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class timer : MonoBehaviour {
 
-    float time_secs = 300;
+    public float time_secs = 10;
     public Text timerText;
 
 
@@ -35,6 +35,11 @@ public class timer : MonoBehaviour {
             string frac = ((time_secs * 100) %100).ToString("000");
 
             timerText.text = "Time Left: " + mins + ":" + secs + ":" + frac;
+        }
+
+        if (time_secs <= 0)
+        {
+            Application.LoadLevel("ded Screen");
         }
     }
 }
